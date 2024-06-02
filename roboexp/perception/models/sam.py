@@ -21,6 +21,7 @@ class MySAM:
         # Build the model
         if use_sam_hq:
             model = build_sam_hq(checkpoint=sam_hq_checkpoint_path)
+            # model = build_sam(checkpoint=sam_hq_checkpoint_path)
         else:
             model = build_sam(checkpoint=sam_checkpoint_path)
         model.to(device)

@@ -12,6 +12,8 @@ class RS_D455:
         self.config = rs.config()
         # Specify the wrist camera serial number
         self.serial_number = '246322303938'
+        # self.serial_number = "309622300987" # D455 rirolab
+        
         self.config.enable_device(self.serial_number)
         self.pipeline = rs.pipeline()
         self.config.enable_stream(rs.stream.depth, WH[0], WH[1], rs.format.z16, 30)
